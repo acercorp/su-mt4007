@@ -1,0 +1,12 @@
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore temporary files
+*.tmp
+*.log
+
+# Ignore all folders except hw folders
+!homework_*/
+
+# Ignore system files
+.DS_Store
