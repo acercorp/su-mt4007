@@ -1,93 +1,84 @@
-# Blog Post: Exploring Data Analysis Techniques
+## Hi
 
-## Introduction
-This blog post explores key data analysis techniques such as writing Python code, making SQL queries, using Regular Expressions (RegEx), working with REST APIs, and performing web scraping. Each section contains code examples to help you understand these concepts hands-on.
+# Blog Post: Dynamic Data Analysis
 
----
+This notebook demonstrates:
+- Creating a table in Python
+- Making a dynamic plot
+- Adding a hyperlink programmatically
 
-## Section 1: Python Code Example
-In this section, we demonstrate a simple Python program to calculate the sum of two numbers.
+Let's explore these features!
 
-```python
-# Simple Python code to add two numbers
-a = 5
-b = 7
-sum_result = a + b
-print(f"The sum of {a} and {b} is {sum_result}")
-```
 
----
-
-## Section 2: SQL Queries
-This section demonstrates how to use SQL to create a table, insert data, and query it using the `ipython-sql` extension.
-
-```sql
--- Create a sample table and insert data
-CREATE TABLE users (id INTEGER, name TEXT);
-INSERT INTO users VALUES (1, 'Alice'), (2, 'Bob');
-
--- Query the data
-SELECT * FROM users;
-```
-
----
-
-## Section 3: Using Regular Expressions (RegEx)
-Here, we use Python's `re` module to extract a specific pattern from a string.
 
 ```python
-import re
+import pandas as pd
 
-# Sample text and pattern
-text = "The price is $10.99"
-pattern = r"\$\d+\.\d+"
+# Data for the table
+data = {
+    "Name": ["Alice", "Bob", "Charlie"],
+    "Age": [25, 30, 35],
+    "Profession": ["Data Analyst", "Developer", "Designer"]
+}
 
-# Search for the pattern
-match = re.search(pattern, text)
-if match:
-    print(f"Found price: {match.group()}")
+# Create a DataFrame
+df = pd.DataFrame(data)
+
+# Display as Markdown
+from tabulate import tabulate
+print(tabulate(df, headers='keys', tablefmt='pipe', showindex=False))
 ```
 
----
+    | Name    |   Age | Profession   |
+    |:--------|------:|:-------------|
+    | Alice   |    25 | Data Analyst |
+    | Bob     |    30 | Developer    |
+    | Charlie |    35 | Designer     |
 
-## Section 4: Using REST APIs
-Learn how to fetch data from a REST API using Python's `requests` library.
+
 
 ```python
-import requests
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation, PillowWriter
 
-# Example: Get a random joke from an API
-response = requests.get("https://official-joke-api.appspot.com/random_joke")
-if response.status_code == 200:
-    joke = response.json()
-    print(f"{joke['setup']} - {joke['punchline']}")
-else:
-    print("Failed to retrieve joke")
+# Create figure and axis
+fig, ax = plt.subplots()
+x = np.linspace(0, 2 * np.pi, 100)
+line, = ax.plot(x, np.sin(x))
+
+# Function to update the plot
+def update(frame):
+    line.set_ydata(np.sin(x + frame / 10.0))  # Shift the sine wave
+    return line,
+
+# Create the animation
+ani = FuncAnimation(fig, update, frames=100, interval=50)
+
+# Save the animation as a GIF
+gif_path = "dynamic_plot.gif"
+ani.save(gif_path, writer=PillowWriter(fps=20))
+
+plt.show()
+
+print(f"GIF saved at {gif_path}")
 ```
 
----
+    /opt/anaconda3/lib/python3.11/site-packages/matplotlib/animation.py:892: UserWarning: Animation was deleted without rendering anything. This is most likely not intended. To prevent deletion, assign the Animation to a variable, e.g. `anim`, that exists until you output the Animation using `plt.show()` or `anim.save()`.
+      warnings.warn(
 
-## Section 5: Web Scraping
-Web scraping allows you to extract data from web pages. Here's an example using `BeautifulSoup`.
 
-```python
-from bs4 import BeautifulSoup
-import requests
 
-# Example: Scrape the title of a webpage
-url = "https://example.com"
-response = requests.get(url)
+    
+![png](output_3_1.png)
+    
 
-if response.status_code == 200:
-    soup = BeautifulSoup(response.text, 'html.parser')
-    title = soup.title.string
-    print(f"Page title: {title}")
-else:
-    print("Failed to retrieve webpage")
-```
 
----
+    GIF saved at dynamic_plot.gif
 
-## Conclusion
-This blog post demonstrated key data analysis techniques with hands-on examples. These examples are foundational for data exploration and manipulation. Try these techniques in your own projects to deepen your understanding!
 
+## Dynamic Plot Example
+
+The plot below dynamically demonstrates an oscillating sine wave:
+
+![Dynamic Plot](dynamic_plot.gif)
