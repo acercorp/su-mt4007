@@ -61,7 +61,7 @@ conn.close()
     
 
 
-### Coffee Sales by Weekday (some SQL)
+## Coffee Sales by Weekday (some SQL)
 
 Yet, as the week unfolds, something curious happens: coffee consumption takes a slight dip in the middle of the workweek, hinting at the mysterious mid-week slump. An interesting question to investigate further would be what it is that could be at the root of this subtle coffee lull.
 
@@ -131,7 +131,7 @@ conn.close()
     
 
 
-### Total Sales per Coffee Type per Month (some more SQL)
+## Total Sales per Coffee Type per Month (some more SQL)
 
 Year-round, *Caffè Latte* and *Americano with Milk* are the steadfast companions for those seeking warmth and serenity. These drinks are the heart of Vinnytsia’s coffee culture, the go-to choice for those who relish the simple pleasure of a good cup.
 
@@ -185,7 +185,7 @@ conn.close()
     
 
 
-### Average Temperature for Coffee Purchases (Web Scraping and API requests)
+## Average Temperature for Coffee Purchases (Web Scraping and API requests)
 
 Then, as the temperature drops, a transformation sweeps across the city’s coffee scene. On chilly days, the familiar Caffè Latte and Americano are momentarily sidelined. In their place, *Hot Cocoa* and *Hot Chocolate* take center stage. These richer, more indulgent options offer not just warmth to the body but also a soul-soothing comfort against the cold. It’s a cozy treat, a moment of indulgence, as if the drink itself is a hug in a cup.
 
@@ -293,7 +293,7 @@ plt.show()
     
 
 
-### Repeat Customer Coffee Preferences (basic python)
+## Repeat Customer Coffee Preferences (basic python)
 
 Finally, amid all the change, one thing remains constant: loyalty. In Vinnytsia, coffee drinkers are creatures of habit. Most people stick to their favorite drink, rarely venturing into unfamiliar territory. Only a select few, the curious adventurers, dare to experiment with new flavors—perhaps just to break the monotony or to satisfy a fleeting craving. But for the majority, it’s the same comforting sip, day in and day out.
 
@@ -355,13 +355,13 @@ plt.show()
     
 
 
-### Summary
+## Summary
 
 In this cozy city, routine and ritual are intertwined. From the steadfast morning coffee break to the seasonal delights that warm hearts and hands, the coffee culture in Vinnytsia is a story of simplicity, comfort, and quiet joy found in every cup.
 
 And so, as the clock strikes 10 a.m. once again, the people of Vinnytsia gather for their next fika, whether it’s a classic Caffè Latte or a steaming mug of Hot Chocolate on a brisk, wintry day. This ritual is timeless, a steadfast companion through the changing seasons, forever etched into the daily rhythm of life in the heart of Ukraine.
 
-### Further Research
+## Further Research
 
 But as we observe this culture, some intriguing questions linger: What exactly drives the subtle shifts in coffee consumption throughout the seasons? Is it the opening hours of local cafés, the promotions on offer, or could there be a deeper, more intricate influence from Vinnytsia’s local culture? And what about the curious behavior of those who purchase multiple cups at once—are they enjoying a coffee break with a friend, perhaps buying a cup for someone else as an expression of friendship or generosity?
 
@@ -369,7 +369,7 @@ Living within the culture will, of course, offer the answers, but using the magn
 
 There’s only one way to find out — by diving deeper into the data, one cup at a time.
 
-### Data Sources
+## Data Sources
 
 Coffee Sales (by Yaroslav Isaienkov): https://www.kaggle.com/datasets/ihelon/coffee-sales \
 Coordinates: https://en.wikipedia.org/wiki/Vinnytsia \
